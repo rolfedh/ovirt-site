@@ -1,90 +1,47 @@
-# If you have OpenSSL installed, we recommend updating
-# the following line to use "https"
-source 'https://rubygems.org'
-source 'https://rails-assets.org'
+source "https://rubygems.org"
+ruby RUBY_VERSION
 
-gem "middleman", "~> 3.3.10"
+# Hello! This is where you manage which Jekyll version is used to run.
+# When you want to use a different version, change it below, save the
+# file and run `bundle install`. Run Jekyll with `bundle exec`, like so:
+#
+#     bundle exec jekyll serve
+#
+# This will help ensure the proper Jekyll version is running.
+# Happy Jekylling!
 
-gem 'compass', '~> 1'
+gem "jekyll"
+# Jekyll missing dependency:
+# LoadError: cannot load such file -- json
+#  /srv/builder/.gem/ruby/2.4.0/gems/jekyll-3.6.0/lib/jekyll/filters.rb:4:in `require'
+gem "json"
 
-# Live-reloading plugin
-gem "middleman-livereload"
-
-# Cross-templating language block fix for Ruby 1.8
-platforms :mri_18 do
-  gem "ruby18_source_location"
+group :jekyll_plugins do
+  gem "jekyll-sass-converter"
+  gem "kramdown"
+  gem "liquid"
+  gem "jemoji"
+  gem "jekyll-redirect-from"
+  gem "jekyll-sitemap"
+  gem "jekyll-paginate"
+  gem "jekyll-coffeescript"
+  gem "jekyll-seo-tag"
+  gem 'jekyll-haml', :git => 'https://github.com/OSAS/jekyll-haml.git', :branch => 'haml_jekyll_context'
+  gem "listen"
+  # This is the default theme for new Jekyll sites. You may change this to anything you like.
+  # gem "minima"
+  # use github unreleased version for now
+  gem "minima", :git => 'https://github.com/jekyll/minima.git'
 end
 
-# For faster file watcher updates for people using Windows
-gem "wdm", "~> 0.1.0", :platforms => [:mswin, :mingw]
+# The CoffeeScript gem depends on execjs which requires a JavaScript runtime.
+# This does the trick without nodejs.
+gem "therubyracer"
 
-
-#####
-# General plugins
-
-# Thumbnailer
-#gem "middleman-thumbnailer", github: "nhemsley/middleman-thumbnailer"
-
-# favicon support (favicon PNG should be 144×144)
-gem "middleman-favicon-maker"
-
-# HTML & XML parsing smarts
-gem "nokogiri"
-gem 'mini_portile'
-
-# Syntax highlighting
-gem "middleman-syntax"
-
-# For feed.xml.builder
-gem "builder", "~> 3.0"
-
-# Better JSON lib
-gem "oj"
-
-# Lock jQuery to 1.x, for better IE support (6 - 8)
-# Fixes and features are backported from 2.x to 1.x; only diff is IE support.
-# see http://blog.jquery.com/2013/01/15/jquery-1-9-final-jquery-2-0-beta-migrate-final-released/
-gem 'rails-assets-jquery', '~> 1'
-
-# Friendly date library
+# for events
+gem 'icalendar', '~> 1.5'
 gem 'chronic'
 
-#####
-# Bootstrap
-
-# Bootstrap, as SASS
-gem "bootstrap-sass"
-
-
-#####
-# Formats
-
-# less (css)
-gem "therubyracer"
-gem "less"
-
-# asciidoctor
-gem "asciidoctor"
-
-gem "coderay"
-gem "stringex"
-
-# Markdown
-gem "kramdown"
-
-gem 'open-uri-cached'
-
-gem 'font-awesome-middleman'
-
-# RSS/Atom parsing
-gem "feedjira"
-
-gem 'rails-assets-bootstrap-sortable'
-
-gem 'rails-assets-momentjs'
-gem 'rails-assets-fullcalendar'
-gem 'icalendar', '~> 1.5'
-gem 'rails-assets-chartjs', '~> 2.1'
-
-gem 'middleman-piwik'
+# for dot access to Hash members in HAML pages
+gem 'hash_dot', '~> 2.4.2'
 
