@@ -7,15 +7,6 @@ GIT
       haml (>= 3.0.0)
       jekyll (>= 3.3.0)
 
-GIT
-  remote: https://github.com/jekyll/minima.git
-  revision: 437522fa8f5e48ba3815fd9893c525ee1e887030
-  specs:
-    minima (2.5.0)
-      jekyll (>= 3.5, < 5.0)
-      jekyll-feed (~> 0.9)
-      jekyll-seo-tag (~> 2.1)
-
 GEM
   remote: https://rubygems.org/
   specs:
@@ -26,6 +17,11 @@ GEM
       tzinfo (~> 1.1)
     addressable (2.6.0)
       public_suffix (>= 2.0.2, < 4.0)
+    autoprefixer-rails (9.6.1)
+      execjs
+    bootstrap-sass (3.4.1)
+      autoprefixer-rails (>= 5.2.1)
+      sassc (>= 2.0.0)
     chronic (0.10.2)
     coffee-script (2.4.1)
       coffee-script-source
@@ -68,8 +64,6 @@ GEM
     jekyll-coffeescript (1.2.2)
       coffee-script (~> 2.2)
       coffee-script-source (~> 1.12)
-    jekyll-feed (0.12.1)
-      jekyll (>= 3.7, < 5.0)
     jekyll-paginate (1.1.0)
     jekyll-redirect-from (0.15.0)
       jekyll (>= 3.3, < 5.0)
@@ -101,6 +95,7 @@ GEM
     pathutil (0.16.2)
       forwardable-extended (~> 2.6)
     public_suffix (3.1.1)
+    rake (12.3.3)
     rb-fsevent (0.10.3)
     rb-inotify (0.10.0)
       ffi (~> 1.0)
@@ -113,6 +108,9 @@ GEM
     sass-listen (4.0.0)
       rb-fsevent (~> 0.9, >= 0.9.4)
       rb-inotify (~> 0.9, >= 0.9.7)
+    sassc (2.0.1)
+      ffi (~> 1.9)
+      rake
     temple (0.8.1)
     therubyracer (0.12.3)
       libv8 (~> 3.16.14.15)
@@ -126,6 +124,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  bootstrap-sass
   chronic
   hash_dot (~> 2.4.2)
   icalendar (~> 1.5)
@@ -142,7 +141,6 @@ DEPENDENCIES
   kramdown
   liquid
   listen
-  minima!
   therubyracer
 
 RUBY VERSION

@@ -28,10 +28,7 @@ group :jekyll_plugins do
   gem "jekyll-seo-tag"
   gem 'jekyll-haml', :git => 'https://github.com/OSAS/jekyll-haml.git', :branch => 'haml_jekyll_context'
   gem "listen"
-  # This is the default theme for new Jekyll sites. You may change this to anything you like.
-  # gem "minima"
-  # use github unreleased version for now
-  gem "minima", :git => 'https://github.com/jekyll/minima.git'
+  gem "bootstrap-sass"
 end
 
 # The CoffeeScript gem depends on execjs which requires a JavaScript runtime.
