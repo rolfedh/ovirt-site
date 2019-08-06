@@ -31,20 +31,6 @@ class SiteHelpers < Middleman::Extension
         .gsub(/!ಠ_ಠ!/, "\n\n")
     end
 
-    def html_to_plaintext(content)
-      Nokogiri::HTML(content).text.strip
-    end
-
-    def markdown_to_html(content)
-      return unless content
-
-      Tilt['markdown'].new(config[:markdown]) { content.strip }.render
-    end
-
-    def markdown_to_plaintext(content)
-      word_unwrap html_to_plaintext(markdown_to_html(content))
-    end
-
     # Use the title from frontmatter metadata,
     # or peek into the page to find the H1,
     # or fallback to a filename-based-title

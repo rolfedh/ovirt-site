@@ -1,0 +1,6 @@
+---
+layout: null
+---
+
+{% haml events_all_ics.haml %}
+

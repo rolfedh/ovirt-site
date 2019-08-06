@@ -1,14 +1,11 @@
----
-layout: false
-index: false
----
-
-- if data[:events]
+- if site.data.events
 
   :ruby
+    require_relative '../../lib/confcal'
+
     conferences = []
 
-    confs_match(data.site.events_filter, data.events).each do |year_label, year|
+    confs_match(site.data.site.events_filter, site.data.events).each do |year_label, year|
 
       if year_label[/\d{4}/]
 

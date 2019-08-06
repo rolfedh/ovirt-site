@@ -1,20 +1,16 @@
----
-layout: false
----
-
 :ruby
   require 'icalendar'
   require 'date'
-  require 'nokogiri'
-  require 'chronic'
+  require 'active_support/core_ext/string/conversions'
+  require_relative '../../lib/confcal'
 
   ######################################################################
 
   cal = Icalendar::Calendar.new
 
-  cal.x_wr_calname = data.site.name
+  cal.x_wr_calname = site.data.site.name
 
-  confs_match(data.site.events_filter).each do |year_label, year|
+  confs_match(site.data.site.events_filter, site.data.events).each do |year_label, year|
 
     if year_label[/\d{4}/]
 
@@ -22,7 +18,7 @@ layout: false
 
         conference = Icalendar::Event.new
 
-        conference.uid = conference.uid.gsub(/@.*/, "@#{data.site.domain}")
+        conference.uid = conference.uid.gsub(/@.*/, "@#{site.data.site.domain}")
 
         conference.summary     = conf.name
         conference.location    = conf.location
@@ -40,7 +36,7 @@ layout: false
           conf.talks.each do |talk|
             event = Icalendar::Event.new
 
-            event.uid = event.uid.gsub(/@.*/, "@#{data.site.domain}")
+            event.uid = event.uid.gsub(/@.*/, "@#{site.data.site.domain}")
 
             description_text = "Speaker: #{talk.speaker}\n\n#{talk.description.to_s.strip}"
 
