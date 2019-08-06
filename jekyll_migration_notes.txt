@@ -1,0 +1,10 @@
+
+access to the data the same way as MM:
+    require 'hash_dot'
+    Hash.use_dot_syntax = true
+
+    data = Jekyll.sites.first.data
+
+
+layout: false is now layout: null
+
