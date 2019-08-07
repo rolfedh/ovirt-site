@@ -42,7 +42,7 @@ defaults:
     scope:
       path: ""
     values:
-      layout: "page"
+      layout: "default"
 
 excerpt_separator: READMORE
 
@@ -56,11 +56,10 @@ exclude:
   - vendor
 
 include:
-  - stylesheets
+#  - stylesheets
   - javascripts
 
 sass:
-  sass_dir: stylesheets
   add_charset: true
   style: :compressed
 
