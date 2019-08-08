@@ -1,5 +1,8 @@
+---
+layout: null
+---
+
 :ruby
-  base = "#{root}/source/fonts"
   baseurl = "/fonts"
   css = ""
 
@@ -48,7 +51,7 @@
   - css += "/** #{type.titleize} font definition **/\n"
   - font_family = ''
 
-  - Dir.glob("#{base}/#{type}/*").each do |font|
+  - Dir.glob("#{type}/*").each do |font|
     - font_file = font.split(/\//).last
 
     - font_family = font_file.split(/-/).first.titleize
