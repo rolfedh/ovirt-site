@@ -42,7 +42,12 @@ defaults:
     scope:
       path: ""
     values:
-      layout: "default"
+      layout: "application"
+  -
+    scope:
+      path: 'develop/release-management/features'
+    values:
+      layout: "feature"
 
 excerpt_separator: READMORE
 
