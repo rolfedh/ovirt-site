@@ -68,6 +68,10 @@ sass:
   add_charset: true
   style: :compressed
 
+favicon:
+  source: images/favicon_base.png
+  path: /images
+
 breadcrumbs:
   root:
     hide: True

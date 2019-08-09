@@ -29,6 +29,7 @@ group :jekyll_plugins do
   gem 'jekyll-haml', :git => 'https://github.com/OSAS/jekyll-haml.git', :branch => 'haml_jekyll_context'
   gem "listen"
   gem "bootstrap-sass"
+  gem "jekyll-favicon"
 end
 
 # The CoffeeScript gem depends on execjs which requires a JavaScript runtime.

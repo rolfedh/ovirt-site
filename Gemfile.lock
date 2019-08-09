@@ -64,6 +64,9 @@ GEM
     jekyll-coffeescript (1.2.2)
       coffee-script (~> 2.2)
       coffee-script-source (~> 1.12)
+    jekyll-favicon (0.2.7)
+      jekyll (~> 3.0)
+      mini_magick (~> 4.5)
     jekyll-paginate (1.1.0)
     jekyll-redirect-from (0.15.0)
       jekyll (>= 3.3, < 5.0)
@@ -88,6 +91,7 @@ GEM
       rb-inotify (~> 0.9, >= 0.9.7)
       ruby_dep (~> 1.2)
     mercenary (0.3.6)
+    mini_magick (4.9.5)
     mini_portile2 (2.4.0)
     minitest (5.11.3)
     nokogiri (1.10.4)
@@ -130,6 +134,7 @@ DEPENDENCIES
   icalendar (~> 1.5)
   jekyll
   jekyll-coffeescript
+  jekyll-favicon
   jekyll-haml!
   jekyll-paginate
   jekyll-redirect-from
